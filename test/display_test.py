@@ -256,13 +256,13 @@ class DisplayModuleTest(unittest.TestCase):
         screen = display.set_mode((0, 0), pygame.OPENGL)
 
         # assign non-default values with gl_set_attribute
-        pygame.display.gl_set_attribute(pygame.GL_ALPHA_SIZE, 8)
-        pygame.display.gl_set_attribute(pygame.GL_DEPTH_SIZE, 24)
-        pygame.display.gl_set_attribute(pygame.GL_STENCIL_SIZE, 8)
-        pygame.display.gl_set_attribute(pygame.GL_ACCUM_RED_SIZE, 16)
-        pygame.display.gl_set_attribute(pygame.GL_ACCUM_GREEN_SIZE, 16)
-        pygame.display.gl_set_attribute(pygame.GL_ACCUM_BLUE_SIZE, 16)
-        pygame.display.gl_set_attribute(pygame.GL_ACCUM_ALPHA_SIZE, 16)
+        pygame.display.gl_set_attribute(pygame.GL_ALPHA_SIZE, 4)
+        pygame.display.gl_set_attribute(pygame.GL_DEPTH_SIZE, 32)
+        pygame.display.gl_set_attribute(pygame.GL_STENCIL_SIZE, 24)
+        pygame.display.gl_set_attribute(pygame.GL_ACCUM_RED_SIZE, 8)
+        pygame.display.gl_set_attribute(pygame.GL_ACCUM_GREEN_SIZE, 8)
+        pygame.display.gl_set_attribute(pygame.GL_ACCUM_BLUE_SIZE, 8)
+        pygame.display.gl_set_attribute(pygame.GL_ACCUM_ALPHA_SIZE, 8)
         pygame.display.gl_set_attribute(pygame.GL_MULTISAMPLEBUFFERS, 1)
         pygame.display.gl_set_attribute(pygame.GL_MULTISAMPLESAMPLES, 1)
         pygame.display.gl_set_attribute(pygame.GL_STEREO, 0)
@@ -276,7 +276,7 @@ class DisplayModuleTest(unittest.TestCase):
         pygame.display.gl_set_attribute(pygame.GL_FRAMEBUFFER_SRGB_CAPABLE, 0)
 
         # List of values that were set for each flag 
-        set_values = [8, 24, 8, 16, 16, 16, 16, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0]
+        set_values = [4, 32, 24, 8, 8, 8, 8, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0]
 
         # Creating a list where the returned values will be stored 
         get_values = []
